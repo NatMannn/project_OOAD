@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>login</title>
+    <style>
+        body {
+            background-image: url('/login.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="border fadeInDown">
+            <h2 class="text-center text-info" style="font-size:45px; margin-top: 20px;margin-bottom: 5px">Login</h2>
+            <hr>
+            <div class="form-group" style="margin-top:10%; margin-left: 20%;">
+                <div class="row">
+                    <div class="col-md-3 " style=" margin-top: 35px; margin-bottom: 15px; padding-left: 5px;">
+                        รหัสประจำตัว
+                    </div>
+                    <div class="col-md-6" style="margin-top: 30px ; padding-right: 10px ;">
+                        <input type="text" class="form-control " name="name" id="id">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 " style="margin-top: 35px; padding-left: 5px;">
+                        รหัสผ่าน
+                    </div>
+                    <div class="col-md-6" style="margin-top: 30px; padding-right: 10px; ">
+                        <input type="password" class="form-control " name="name" id="password">
+                    </div>
+                </div>
+                <a href="main.html"><button  style="margin-bottom:30px;" type="button"
+                    class="btn btn-success btnLogin">ยืนยัน</button></a>
+            </div>
+        </div>
+        <div class="row errorRowLogin" id="formError">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="alert alert-danger error">
+                        รหัสผู้ใช้ต้องเป็นตัวเลขเท่านั้น
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row errorRowLogin" id="formNull">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="alert alert-danger error">
+                        กรุณากรอกข้อมูลให้ครบ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /#page-content-wrapper -->
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"> </script>
+
+
+</body>
+
+</html>

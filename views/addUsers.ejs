@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <title>เพิ่มข้อมูลผู้ใช้</title>
+</head>
+
+<body>
+
+  <!-- <nav bar> -->
+  <nav class="navbar navbar-expand-md  navbar-light bg-light navBar">
+    <a class="navbar-brand" href="#">
+     <div style="padding: 20px"></div>
+
+    </a>
+  </nav>
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right slider-color" id="sidebar-wrapper">
+      <div class="list-group list-group-flush ">
+        <br><br>
+        <a href="/reg/login" class="list-group-item list-group-item-action  bg-light textColor slider-left"><i
+            class="fas fa-sign-out-alt"></i> <span class="sliderBar"> ออกจากระบบ</span></a>
+        <a href="#" class="list-group-item list-group-item-action  bg-light textColor slider-left"><i
+            class="fas fa-school"></i><span class="sliderBar"> จัดการห้องเรียน</span> </a>
+        <a href="#" class="list-group-item list-group-item-action  bg-light  slider-active"><i
+            class="fas fa-user"></i><span class="sliderBar"> จัดการผู้ใช้</span> </a>
+        <a href="#" class="list-group-item list-group-item-action  bg-light textColor slider-left"><i
+            class="fas fa-book"></i><span class="sliderBar"> สร้างการสอบ</span> </a>
+        <a href="#" class="list-group-item list-group-item-action  bg-light textColor slider-left"><i
+            class="fas fa-chalkboard-teacher"></i><span class="sliderBar"> จัดการข้อมูลนิสิต</span> </a>
+        <a href="#" class="list-group-item list-group-item-action  bg-light textColor slider-left"><i
+            class="fas fa-file-alt"></i><span class="sliderBar"> จัดการการสอบ</span> </a>
+        <a href="#" class=" list-group-item-info bg-light"></a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="mt-4 title " style="padding-left: 30px">
+          <i class="fas fa-user"></i> <span class="titleIcon"> เพิ่มข้อมูลผู้ใช้</span>
+        </div>
+
+        <form method="post" action="/reg/create">
+          <div class="row">
+            <div class="col" style="margin-top: 50px">
+              <div class="row">
+                <div class="col-md-4 addUserCol4">
+                  รหัสผู้ใช้
+                </div>
+                <div class="col-md-8 " style="margin-bottom: 5%;">
+                  <input type="text" class="form-control " onfocus="this.value=''" name="idUser" id="ID" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 addUserCol4">
+                  ชื่อ
+                </div>
+                <div class="col-md-8" style="margin-bottom: 5%;">
+                  <!-- name="name" id="name"> -->
+                  <input type="text" class="form-control " id="name" name="firstname" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 addUserCol4">
+                  นามสกุล
+                </div>
+                <div class="col-md-8" style="margin-bottom: 5%;">
+                  <!-- name="surname" id="surname" -->
+                  <input type="text" class="form-control " id="surname" name="lastname" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 addUserCol4">
+                  ประเภท
+                </div>
+                <div class="col-md-8" style="margin-bottom: 5%;">
+                  <select style="width:100px;height: 35px;" id="selectType" name="selectType">
+                    <option value="นิสิต">นิสิต</option>
+                    <option value="อาจารย์">อาจารย์</option>
+                    <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="row errorRow" id="formError">
+                <div class="col-md-12">
+                  <div class="container">
+                    <div class="alert alert-danger error">
+                      รหัสผู้ใช้ต้องเป็นตัวเลขเท่านั้น
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row errorRow" id="formNull">
+                <div class="col-md-12">
+                  <div class="container">
+                    <div class="alert alert-danger error">
+                      กรุณากรอกข้อมูลให้ครบ
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="row" style="margin-top: 35%">
+              <button type="submit" class="btn btn-success"
+                style="width:70%;  padding: 10px ;margin-top: 5px">ยืนยัน</button>
+              <a href="/reg/managerUsers"><button type="button" class="btn btn-danger"
+                  style="width:130%; margin-left: 2px; padding: 10px ;margin-top: 5px">ยกเลิก</button>
+              </a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+   
+    </form>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="/script.js"> </script>
+
+</body>
+
+</html>
